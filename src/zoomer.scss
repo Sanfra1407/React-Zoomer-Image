@@ -1,0 +1,48 @@
+$timing: 280ms;
+
+.zoomer {
+  &__no-overflow {
+    overflow: hidden;
+  }
+
+  &__backdrop {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 1;
+    z-index: 50;
+    height: 100%;
+    position: fixed;
+    background: #FFFFFF;
+    transition: opacity 200ms linear;
+  
+    &--hidden {
+      opacity: 0;
+      transition: opacity 200ms linear;
+    }
+  }
+
+  &__img {
+    cursor: zoom-in;
+    position: relative;
+    transition: transform $timing linear;
+
+    &--zoomed {
+      z-index: 100;
+      cursor: zoom-out;
+      transition: transform $timing linear;
+
+      img {
+        transition: transform $timing linear;
+      }
+    }
+
+    img{
+      width: 100%;
+      max-width: 100%;
+      transform: scale(1);
+      transition: transform $timing linear;
+    }
+  }
+}
