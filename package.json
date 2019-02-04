@@ -7,8 +7,17 @@
     "build": "webpack --mode=production",
     "dev": "webpack-dev-server --mode=development"
   },
-  "keywords": [],
-  "author": "Giuseppe Sanfrancesco",
+  "keywords": [
+    "react",
+    "react-component",
+    "component",
+    "react-zoomer-image",
+    "react-image",
+    "zoom-image",
+    "zoom",
+    "image"
+  ],
+  "author": "Giuseppe Sanfrancesco (https://www.giuseppesanfrancesco.it/)",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.2.2",
