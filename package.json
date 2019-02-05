@@ -1,8 +1,14 @@
 {
   "name": "react-zoomer-image",
-  "version": "0.1.0",
-  "description": "React library to zoom images",
+  "version": "0.1.1",
+  "description": "React Zoomer Image: a simple React component to make your images zoomable.",
   "main": "dist/index.js",
+  "author": "Giuseppe Sanfrancesco (https://www.giuseppesanfrancesco.it/)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Sanfra1407/react-zoomer-image.git"
+  },
   "scripts": {
     "build": "webpack --mode=production",
     "dev": "webpack-dev-server --mode=development"
@@ -17,8 +23,6 @@
     "zoom",
     "image"
   ],
-  "author": "Giuseppe Sanfrancesco (https://www.giuseppesanfrancesco.it/)",
-  "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.2.2",
     "@babel/plugin-proposal-class-properties": "^7.3.0",
@@ -29,13 +33,19 @@
     "node-sass": "^4.11.0",
     "path": "^0.12.7",
     "prop-types": "^15.6.0",
-    "react": "^16.0.0",
-    "react-dom": "^16.0.0",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
     "uglifyjs-webpack-plugin": "^2.1.1",
     "webpack": "^4.20.2",
     "webpack-cli": "^3.1.1",
     "webpack-dev-server": "^3.1.14"
+  },
+  "peerDependencies": {
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0"
+  },
+  "dependencies": {
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0"
   }
 }
