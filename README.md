@@ -1,7 +1,7 @@
 # React Zoomer Image
 **React Zoomer Image** is a simple React component to zoom images. It's strongly inspired by the beautiful Medium zoom effect.
 
-Click [here](https://zl5vw7p3km.codesandbox.io/) to try the online demo version.
+Click [here](https://testal.app/react-avengers/) to try the online demo version.
 
 ## Table of contents
 - [Install](#install)
