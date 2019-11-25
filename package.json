@@ -11,7 +11,8 @@
   },
   "scripts": {
     "build": "webpack --mode=production",
-    "build:example": "webpack --config webpack.example.js",
+    "example:build": "webpack --config ./example/webpack.config.js",
+    "example:serve": "npm run example:build && node_modules/.bin/http-server ./example",
     "dev": "webpack-dev-server --mode=development"
   },
   "keywords": [

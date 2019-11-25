@@ -27,19 +27,19 @@ class ZoomerImage extends Component<IProps, IState> {
 
   overlay: HTMLElement = null;
 
-  _keyPressListener = (e: any) => {
+  _keyPressListener = (e: any): void => {
     if (e.keyCode === 27) {
       this._zoomOut();
     }
   };
 
-  _zoomOut = () => {
+  _zoomOut = (): void => {
     if (this.state.zoomed && !this.state.transitioning) {
       this.zoom();
     }
   };
 
-  _getOffsets = () => {
+  _getOffsets = (): any => {
     const { zoomId } = this.props;
     const halfScreenX: number = window.innerWidth / 2;
     const halfScreenY: number = window.innerHeight / 2;
@@ -63,7 +63,7 @@ class ZoomerImage extends Component<IProps, IState> {
     };
   };
 
-  zoom = () => {
+  zoom = (): void => {
     const { offsetX, offsetY, scale } = this._getOffsets();
 
     this.setState(
