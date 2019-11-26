@@ -1,19 +1,27 @@
 import React, { Component } from "react";
 import "./zoomer.scss";
 
-interface IState {
-  zoomed: boolean;
-  transitioning: boolean;
-  offsetX: number;
-  offsetY: number;
-  scale: number;
-}
-
+/**
+ * @interface IProps
+ * @description Component's props
+ */
 interface IProps {
   zoomId: string;
   imgSrc: string;
   imgAlt?: string;
   imgTitle?: string;
+}
+
+/**
+ * @interface IState
+ * @description Component's state
+ */
+interface IState {
+  scale: number;
+  offsetX: number;
+  offsetY: number;
+  zoomed: boolean;
+  transitioning: boolean;
 }
 
 class ZoomerImage extends Component<IProps, IState> {
@@ -25,20 +33,36 @@ class ZoomerImage extends Component<IProps, IState> {
     scale: 1
   };
 
-  overlay: HTMLElement = null;
-
+  /**
+   * @method _keyPressListener
+   * @description Function to be called when the ESC button is pressed
+   *
+   * @returns {void}
+   */
   _keyPressListener = (e: any): void => {
     if (e.keyCode === 27) {
       this._zoomOut();
     }
   };
 
+  /**
+   * @method _zoomOut
+   * @description Function for removing the zoom
+   *
+   * @returns {void}
+   */
   _zoomOut = (): void => {
     if (this.state.zoomed && !this.state.transitioning) {
       this.zoom();
     }
   };
 
+  /**
+   * @method _getOffsets
+   * @description Function for getting the image coordinates for the animation
+   *
+   * @returns {any}
+   */
   _getOffsets = (): any => {
     const { zoomId } = this.props;
     const halfScreenX: number = window.innerWidth / 2;
@@ -97,6 +121,12 @@ class ZoomerImage extends Component<IProps, IState> {
     document.querySelector("body").removeEventListener("wheel", this._zoomOut);
     window.removeEventListener("resize", this._zoomOut);
   };
+
+  /**
+   * @const overlay
+   * @descriptions HTML Element to add the overlay to the page
+   */
+  overlay: HTMLElement = null;
 
   constructor(props) {
     super(props);
