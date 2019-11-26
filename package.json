@@ -1,6 +1,6 @@
 {
   "name": "react-zoomer-image",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "React Zoomer Image: a simple React component to make your images zoomable.",
   "main": "dist/index.js",
   "author": "Giuseppe Sanfrancesco (https://www.giuseppesanfrancesco.it/)",
