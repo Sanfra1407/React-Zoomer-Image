@@ -51,23 +51,21 @@ import { ZoomerImage } from "react-zoomer-image";
 and use it into your React components. e.g.
 
 ```jsx
-import React, { Component } from "react";
+import React from "react";
 import { ZoomerImage } from "react-zoomer-image";
 
-class AwesomeComponent extends Component {
-  render() {
-    return (
-      <div className="awesome-component">
-        <ZoomerImage
-          zoomId="awesome-image"
-          imgAlt="Awesome Image"
-          imgTitle="This is a really awesome image!"
-          imgSrc="http://awesome.image/foo.jpg"
-        />
-      </div>
-    );
-  }
-}
+const AwesomeComponent = () => {
+  return (
+    <div className="awesome-component">
+      <ZoomerImage
+        zoomId="awesome-image"
+        imgAlt="Awesome Image"
+        imgTitle="This is a really awesome image!"
+        imgSrc="http://awesome.image/foo.jpg"
+      />
+    </div>
+  );
+};
 ```
 
 Then you'll just have to click on the image and enjoy the magic!
