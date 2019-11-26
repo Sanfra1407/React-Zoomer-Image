@@ -1,0 +1,7 @@
+.vscode/
+node_modules/
+example/
+.DS_Store
+.gitignore
+package-lock.json
+yarn.lock
