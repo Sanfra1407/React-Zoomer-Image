@@ -64,30 +64,6 @@ class ZoomerImage extends Component<IProps, IState> {
   };
 
   /**
-   * @method _zoomOut
-   * @description Function for removing the zoom
-   *
-   * @returns {void}
-   */
-  _zoomOut = (): void => {
-    if (this.state.zoomed && !this.state.transitioning) {
-      this.zoom();
-    }
-  };
-
-  /**
-   * @method _keyPressListener
-   * @description Function to be called when the ESC button is pressed
-   *
-   * @returns {void}
-   */
-  _keyPressListener = (e: any): void => {
-    if (e.keyCode === 27) {
-      this._zoomOut();
-    }
-  };
-
-  /**
    * @method zoom
    * @description Function for the zoom effect
    *
@@ -129,8 +105,32 @@ class ZoomerImage extends Component<IProps, IState> {
   };
 
   /**
-   * @const overlay
-   * @descriptions HTML Element to add the overlay to the page
+   * @method _zoomOut
+   * @description Function for removing the zoom
+   *
+   * @returns {void}
+   */
+  _zoomOut = (): void => {
+    if (this.state.zoomed && !this.state.transitioning) {
+      this.zoom();
+    }
+  };
+
+  /**
+   * @method _keyPressListener
+   * @description Function to be called when the ESC button is pressed
+   *
+   * @returns {void}
+   */
+  _keyPressListener = (e: any): void => {
+    if (e.keyCode === 27) {
+      this._zoomOut();
+    }
+  };
+
+  /**
+   * @property {HTMLElement} overlay
+   * @description HTML Element to add the overlay to the page
    */
   overlay: HTMLElement = null;
 
