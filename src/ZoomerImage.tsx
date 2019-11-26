@@ -12,8 +12,8 @@ interface IState {
 interface IProps {
   zoomId: string;
   imgSrc: string;
-  imgAlt: string;
-  imgTitle: string;
+  imgAlt?: string;
+  imgTitle?: string;
 }
 
 class ZoomerImage extends Component<IProps, IState> {
