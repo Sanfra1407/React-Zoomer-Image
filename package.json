@@ -12,7 +12,7 @@
   "scripts": {
     "build": "webpack --mode=production",
     "example:build": "webpack --config ./example/webpack.config.js",
-    "example:serve": "npm run example:build && node_modules/.bin/http-server ./example",
+    "example:serve": "npm run example:build && node_modules/.bin/http-server ./example -p 9009",
     "dev": "webpack-dev-server --mode=development"
   },
   "keywords": [
