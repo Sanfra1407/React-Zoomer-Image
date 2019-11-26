@@ -34,30 +34,6 @@ class ZoomerImage extends Component<IProps, IState> {
   };
 
   /**
-   * @method _keyPressListener
-   * @description Function to be called when the ESC button is pressed
-   *
-   * @returns {void}
-   */
-  _keyPressListener = (e: any): void => {
-    if (e.keyCode === 27) {
-      this._zoomOut();
-    }
-  };
-
-  /**
-   * @method _zoomOut
-   * @description Function for removing the zoom
-   *
-   * @returns {void}
-   */
-  _zoomOut = (): void => {
-    if (this.state.zoomed && !this.state.transitioning) {
-      this.zoom();
-    }
-  };
-
-  /**
    * @method _getOffsets
    * @description Function for getting the image coordinates for the animation
    *
@@ -87,6 +63,36 @@ class ZoomerImage extends Component<IProps, IState> {
     };
   };
 
+  /**
+   * @method _zoomOut
+   * @description Function for removing the zoom
+   *
+   * @returns {void}
+   */
+  _zoomOut = (): void => {
+    if (this.state.zoomed && !this.state.transitioning) {
+      this.zoom();
+    }
+  };
+
+  /**
+   * @method _keyPressListener
+   * @description Function to be called when the ESC button is pressed
+   *
+   * @returns {void}
+   */
+  _keyPressListener = (e: any): void => {
+    if (e.keyCode === 27) {
+      this._zoomOut();
+    }
+  };
+
+  /**
+   * @method zoom
+   * @description Function for the zoom effect
+   *
+   * @returns {void}
+   */
   zoom = (): void => {
     const { offsetX, offsetY, scale } = this._getOffsets();
 
