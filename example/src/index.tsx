@@ -1,5 +1,10 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import ExampleComponent from "./ExampleComponent";
+import React from 'react';
+import ReactDOM from "react-dom/client"
+import Avengers from './Avengers';
+import './index.scss';
 
-ReactDOM.render(<ExampleComponent />, document.getElementById("app"));
+ReactDOM.createRoot(document.getElementById('app')).render(
+  <React.StrictMode>
+    <Avengers />
+  </React.StrictMode>,
+);
